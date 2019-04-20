@@ -2,18 +2,15 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import styles from '../styles.js'
 
-class pictures extends React.Component{
-    state ={}
-    
-    componentWillMount() {}
-    
-        render(){
-        return(
-            <View>
-            <Text>pictures</Text>
-            </View>
-        )
-        }
+class Pictures extends React.Component {
+    render() {
+      return (
+        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+          <Text>woooo</Text>
+        </View>
+      );
     }
+  }
     
-    export default pictures;
+    export default Pictures;
+    

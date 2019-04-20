@@ -1,16 +1,17 @@
-import React from 'react';
-import Home from './screens/home.js'
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { View, Text, Button } from "react-native";
+import Home from './screens/home';
+import Faqs from './screens/faqs';
+import Calender from './screens/calender';
+import Pictures from './screens/pictures';
+import { createMaterialTopTabNavigator, createAppContainer,} from 'react-navigation';
 
-import styles from './styles.js'
 
+const TabNavigator = createMaterialTopTabNavigator({
+  Home: Home,
+  Calender: Calender,
+  Pictures: Pictures,
+  Faqs: Faqs,
+});
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Home/>
-      </View>
-    );
-  }
-}
+export default createAppContainer(TabNavigator);

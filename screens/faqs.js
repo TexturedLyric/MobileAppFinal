@@ -2,18 +2,15 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import styles from '../styles.js'
 
-class faqs extends React.Component{
-    state ={}
-    
-    componentWillMount() {}
-    
-        render(){
-        return(
-            <View>
-            <Text>faqs</Text>
-            </View>
-        )
-        }
+class Faqs extends React.Component {
+    render() {
+      return (
+        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+          <Text>i just want to die</Text>
+        </View>
+      );
     }
+  }
     
-    export default faqs;
+    export default Faqs;
+    

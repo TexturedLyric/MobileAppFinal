@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import styles from '../styles.js'
 
+
 class lostandfound extends React.Component{
     state ={}
     
@@ -17,3 +18,4 @@ class lostandfound extends React.Component{
     }
     
     export default lostandfound;
+    

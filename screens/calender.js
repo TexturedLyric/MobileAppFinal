@@ -2,18 +2,15 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import styles from '../styles.js'
 
-class calender extends React.Component{
-    state ={}
-    
-    componentWillMount() {}
-    
-        render(){
-        return(
-            <View>
-            <Text>calender</Text>
-            </View>
-        )
-        }
+class Calender extends React.Component {
+    render() {
+      return (
+        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+          <Text>somebody kill me</Text>
+        </View>
+      );
     }
+  }
     
-    export default calender;
+    export default Calender;
+    
