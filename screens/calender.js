@@ -12,13 +12,14 @@ export default class CalendarsScreen extends Component {
   render() {
     return (
       <ScrollView style={styles.container}>
-        <Text style={styles.text}>Calendar with selectable date and arrows</Text>
+        <Text style={styles.text}>These are the Current Events Planned</Text>
         <Calendar
           onDayPress={this.onDayPress}
           style={styles.calendar}
           hideExtraDays
           markedDates={{[this.state.selected]: {selected: true, disableTouchEvent: true, selectedDotColor: 'orange'}}}
         />
+        {/* ------- THIS SECTION IS JUST REFERENCE OF OTHER CALENDER TYPES-------------
         <Text style={styles.text}>Calendar with marked dates and hidden arrows</Text>
         <Calendar
           style={styles.calendar}
@@ -244,6 +245,7 @@ export default class CalendarsScreen extends Component {
             }}}
           hideArrows={false}
         />
+        */}
       </ScrollView>
     );
   }
