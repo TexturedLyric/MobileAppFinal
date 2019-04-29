@@ -1,6 +1,8 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, ScrollView, View, Linking } from 'react-native';
 import styles from '../styles.js'
+import Countdown from '../components/countdown';
+import { SocialIcon } from 'react-native-elements';
 
 class Home extends React.Component {
   static navigationOptions = {
@@ -15,9 +17,17 @@ class Home extends React.Component {
 
     render() {
       return (
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-          <Text>Who wants a muffin?</Text>
+        <ScrollView style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <Text style={{ alignItems: 'center', justifyContent: 'center' }}>
+          EDISGCON Countdown</Text>
+        <Countdown />
+        <View style={{flex: 3, flexDirection: 'row'}}>
+          <SocialIcon onPress={ ()=>{ Linking.openURL('https://google.com')}} type='twitter' />
+          <SocialIcon type='facebook' />
+          <SocialIcon type='instagram' />
+          <SocialIcon type='linkedin' />
         </View>
+      </ScrollView>
       );
     }
   }
