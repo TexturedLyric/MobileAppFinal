@@ -3,7 +3,7 @@ import { View } from 'react-native';
 import CountDown from 'react-native-countdown-component';
 import moment from 'moment';
 
-export default class Countdown extends Component {
+export default class Countdown extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
