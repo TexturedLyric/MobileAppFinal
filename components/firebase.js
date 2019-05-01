@@ -1,10 +1,9 @@
 import React from 'react';
 import * as firebase from 'firebase';
 import "@firebase/firestore";
-import { Image, Platform, ScrollView, StyleSheet, TouchableOpacity, View,} from 'react-native';
-import { Card, Text, Avatar } from 'react-native-elements';
+import { Image, Platform, ScrollView, StyleSheet, TouchableOpacity, View,Text} from 'react-native';
 
-//change thsi shit
+
 var firebaseConfig = {
     apiKey: "AIzaSyDffGCZRShzCsW-SkOVAP6aPOAPy4Gx_-U",
     authDomain: "mobilefinal-15268.firebaseapp.com",
@@ -14,13 +13,16 @@ var firebaseConfig = {
     messagingSenderId: "298349171585"
   };
 
-firebase.initializeApp(firebaseConfig);
+  if (!firebase.apps.length) {
+    firebase.initializeApp(firebaseConfig);
+}
+
 
 var cards = [];
 
-getMembers();
-async function getMembers() {
-  const mainData = await firebase.firestore().collection("members").get();
+getSpeakers();
+async function getSpeakers() {
+  const mainData = await firebase.firestore().collection("speakers").get();
   var relData = mainData.docs.map(doc => doc.data());
 
   for (var i = 0; i < relData.length; i++) {
@@ -29,16 +31,11 @@ async function getMembers() {
   }
 }
 
-
 export default class TeamScreen extends React.Component {
-    static navigationOptions = {
-      title: 'Team',
-    };
-  
     render() {
       return(
         <View>
-          {cards}
+          <Text>I am seen</Text>
         </View>
       )
     }

@@ -20,14 +20,15 @@ class Home extends React.Component {
       return (
         <ScrollView >
         <Text style={{ alignItems: 'center', justifyContent: 'center' }}>
-          EDISGCON Countdown</Text>
+          EDISGCON Countdown
+        </Text>
         <Countdown />
+        <TeamScreen/>
         <View style={{flex: 3, flexDirection: 'row'}}> 
           <SocialIcon onPress={ ()=>{ Linking.openURL('https://twitter.com/edsigcon')}} type='twitter' />
           <SocialIcon onPress={ ()=>{ Linking.openURL('https://www.facebook.com/groups/edsig/')}} type='facebook' />
           <SocialIcon onPress={ ()=>{ Linking.openURL('https://www.linkedin.com/groups/8655139/')}} type='linkedin' />
         </View>
-        <TeamScreen/>
       </ScrollView>
       );
     }
