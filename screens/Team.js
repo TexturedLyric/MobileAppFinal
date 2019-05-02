@@ -6,7 +6,7 @@ import 'firebase/firestore';
 
 let collaborators = [];
 
-export default class App extends React.Component {
+export default class Team extends React.Component {
 
   constructor(props)
   {
@@ -39,7 +39,7 @@ export default class App extends React.Component {
   }
 
   GetAllCollaborators(Name){
-    let colRef = this.state.db.collection("");
+    let colRef = this.state.db.collection("Collaborators");
 
     colRef.get()
              .then( (querySnapshot) => {

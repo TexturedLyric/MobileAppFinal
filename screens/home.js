@@ -3,7 +3,6 @@ import { StyleSheet, Text, ScrollView, View, Linking } from 'react-native';
 import styles from '../styles.js'
 import Countdown from '../components/countdown';
 import { SocialIcon } from 'react-native-elements';
-import TeamScreen from '../components/firebase'
 
 class Home extends React.Component {
   static navigationOptions = {
@@ -23,7 +22,6 @@ class Home extends React.Component {
           EDISGCON Countdown
         </Text>
         <Countdown />
-        <TeamScreen/>
         <View style={{flex: 3, flexDirection: 'row'}}> 
           <SocialIcon onPress={ ()=>{ Linking.openURL('https://twitter.com/edsigcon')}} type='twitter' />
           <SocialIcon onPress={ ()=>{ Linking.openURL('https://www.facebook.com/groups/edsig/')}} type='facebook' />
