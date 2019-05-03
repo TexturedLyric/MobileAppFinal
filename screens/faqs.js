@@ -8,17 +8,13 @@ import CardView from 'react-native-cardview';
       <SafeAreaView style={styles.safeAreaView}>
         <View style={styles.container}>
           <View flexDirection="row">
-            <CardView
-              cardElevation={0}
-              cardMaxElevation={0}
+          <CardView
+              cardElevation={1}
+              cardMaxElevation={1}
               cornerRadius={5}
               style={styles.card}
             >
-              <View>
-                <Text style={{ backgroundColor: 'yellow' }}>Elevation 0</Text>
-                <Text>Elevation 1</Text>
-                <Text>Ele</Text>
-              </View>
+              <Text style={styles.text}>Elevation 1</Text>
             </CardView>
             <CardView
               cardElevation={1}
