@@ -12,44 +12,11 @@ export default class CalendarsScreen extends Component {
   render() {
     return (
       <ScrollView style={styles.container}>
-        <Text style={styles.text}>These are the Current Events Planned</Text>
-        <Calendar
-          onDayPress={this.onDayPress}
-          style={styles.calendar}
-          hideExtraDays
-          markedDates={{[this.state.selected]: {selected: true, disableTouchEvent: true, selectedDotColor: 'orange'}}}
-        />
-        {/* ------- THIS SECTION IS JUST REFERENCE OF OTHER CALENDER TYPES-------------
-        <Text style={styles.text}>Calendar with marked dates and hidden arrows</Text>
+        <Text style={styles.text}>Calendar for Edsigcon</Text>
         <Calendar
           style={styles.calendar}
-          current={'2012-05-16'}
+          current={''}
           minDate={'2012-05-10'}
-          maxDate={'2012-05-29'}
-          firstDay={1}
-          markedDates={{
-            '2012-05-23': {selected: true, marked: true},
-            '2012-05-24': {selected: true, marked: true, dotColor: 'green'},
-            '2012-05-25': {marked: true, dotColor: 'red'},
-            '2012-05-26': {marked: true},
-            '2012-05-27': {disabled: true, activeOpacity: 0}
-          }}
-          // disabledByDefault={true}
-          hideArrows={true}
-        />
-        <Text style={styles.text}>Calendar with custom day component</Text>
-        <Calendar
-          style={[styles.calendar, {height: 300}]}
-          dayComponent={({date, state}) => {
-            return (<View><Text style={{textAlign: 'center', color: state === 'disabled' ? 'gray' : 'black'}}>{date.day}</Text></View>);
-          }}
-        />
-        <Text style={styles.text}>Calendar with period marking and spinner</Text>
-        <Calendar
-          style={styles.calendar}
-          current={'2012-05-16'}
-          minDate={'2012-05-10'}
-          displayLoadingIndicator
           markingType={'period'}
           theme={{
             calendarBackground: '#333248',
@@ -70,182 +37,51 @@ export default class CalendarsScreen extends Component {
             }
           }}
           markedDates={{
-            '2012-05-17': {disabled: true},
-            '2012-05-08': {textColor: '#666'},
-            '2012-05-09': {textColor: '#666'},
-            '2012-05-14': {startingDay: true, color: 'blue', endingDay: true},
-            '2012-05-21': {startingDay: true, color: 'blue'},
-            '2012-05-22': {endingDay: true, color: 'gray'},
-            '2012-05-24': {startingDay: true, color: 'gray'},
-            '2012-05-25': {color: 'gray'},
-            '2012-05-26': {endingDay: true, color: 'gray'}}}
+            '2019-11-06': {startingDay: true, color: 'blue'},
+            '2019-11-07': {color: 'grey'},
+            '2019-11-08': {color: 'grey'},
+            '2019-11-09': {endingDay: true, color: 'blue'}}}
           hideArrows={false}
         />
-        <Text style={styles.text}>Calendar with multi-dot marking</Text>
-        <Calendar
-          style={styles.calendar}
-          current={'2012-05-16'}
-          markingType={'multi-dot'}
-          markedDates={{
-            '2012-05-08': {dots: [{key: 'vacation', color: 'blue', selectedDotColor: 'white'}, {key: 'massage', color: 'red', selectedDotColor: 'white'}], selected: true},
-            '2012-05-09': {dots: [{key: 'vacation', color: 'blue', selectedDotColor: 'red'}, {key: 'massage', color: 'red', selectedDotColor: 'blue'}], disabled: true}
-          }}
-          hideArrows={false}
-        />
-        <Text style={styles.text}>Calendar with multi-period marking</Text>
-        <Calendar
-          style={styles.calendar}
-          current={'2012-05-16'}
-          markingType={'multi-period'}
-          markedDates={{  
-            '2012-05-16': {  
-              periods: [  
-                { startingDay: true, endingDay: false, color: '#5f9ea0' },
-                { startingDay: true, endingDay: false, color: '#ffa500' },
-              ]
-            },
-            '2012-05-17': {  
-              periods: [  
-                { startingDay: false, endingDay: true, color: '#5f9ea0' },
-                { startingDay: false, endingDay: true, color: '#ffa500' },
-                { startingDay: true, endingDay: false, color: '#f0e68c' },
-              ]
-            },
-            '2012-05-18': {  
-              periods: [  
-                { startingDay: true, endingDay: true, color: '#ffa500' },
-                { color: 'transparent' },
-                { startingDay: false, endingDay: false, color: '#f0e68c' },
-              ]
-            },
-          }}
-          hideArrows={false}
-        />
-        <Text style={styles.text}>Calendar with week numbers</Text>
-        <Calendar
-          onDayPress={this.onDayPress}
-          style={styles.calendar}
-          hideExtraDays
-          showWeekNumbers
-          markedDates={{[this.state.selected]: {selected: true}}}
-        />
-        <Text style={styles.text}>Custom calendar with custom marking type</Text>
-        <Calendar
-          style={styles.calendar}
-          onDayLongPress={this.onDayLongPress}
-          hideExtraDays
-          current={'2018-03-01'}
-          minDate={'2018-03-01'}
-          markingType={'custom'}
-          markedDates={{
-            '2018-03-01': {
-              customStyles: {
-                container: {
-                  backgroundColor: 'white',
-                  elevation: 2
-                },
-                text: {
-                  color: 'blue',
-                },
-              }
-            },
-            '2018-03-08': {selected: true},
-            '2018-03-09': {
-              customStyles: {
-                container: {
-                  backgroundColor: 'red',
-                  elevation: 4,
-                },
-                text: {
-                  color: 'white',
-                },
-              }
-            },
-            '2018-03-10': {disabled: true},
-            '2018-03-14': {
-              customStyles: {
-                container: {
-                  backgroundColor: 'green',
-                },
-                text: {
-                  color: 'white',
-                },
-              },
-            },
-            '2018-03-15': {
-              customStyles: {
-                container: {
-                  backgroundColor: 'black',
-                  elevation: 2
-                },
-                text: {
-                  color: 'yellow',
-                },
-              }
-            },
-            '2018-03-20': {
-              customStyles: {
-                container: {
-                  backgroundColor: 'pink',
-                  elevation: 4,
-                },
-                text: {
-                  color: 'blue',
-                },
-              }
-            },
-            '2018-03-21': {disabled: true},
-            '2018-03-28': {
-              customStyles: {
-                container: {
-                  backgroundColor: 'green',
-                },
-                text: {
-                  color: 'black',
-                  fontWeight: 'bold'
-                },
-              },
-            },
-            '2018-03-29': {
-              customStyles: {
-                container: {
-                  backgroundColor: 'white',
-                  elevation: 2
-                },
-                text: {
-                  color: 'blue',
-                },
-              }
-            },
-            '2018-03-30': {
-              customStyles: {
-                container: {
-                  backgroundColor: 'violet',
-                  elevation: 4,
-                  borderColor: 'red',
-                  borderWidth: 5,
-                },
-                text: {
-                  marginTop: 3,
-                  fontSize: 11,
-                  color: 'yellow',
-                },
-              }
-            },
-            '2018-03-31': {
-              customStyles: {
-                container: {
-                  backgroundColor: 'green',
-                  borderRadius: 0,
-                },
-                text: {
-                  color: 'white',
-                },
-              },
-            }}}
-          hideArrows={false}
-        />
-        */}
+        <Text style={{ alignItems: 'center', fontSize: 30, textDecorationLine: "underline" }}>
+            Event Times Planned:
+        </Text>
+        <Text style={{ alignItems: 'center', fontSize: 25 }}>
+            Wednesday, November 6th:
+        </Text>
+        <Text style={{ alignItems: 'center', fontSize: 15 }}>
+            - 6:00pm Light Reception - Registration
+        </Text>
+        <Text style={{ alignItems: 'center', fontSize: 25 }}>
+            Thursday, November 7th:
+        </Text>
+        <Text style={{ alignItems: 'center', fontSize: 15 }}>
+            - 7:00am - 4:30p Registration{"\n"}
+            - 7:30am Breakfast{"\n"}
+            - 8:30am - 12:00pm Sessions and Workshops begin{"\n"}
+            - 12:00pm Industry Keynote Lunch{"\n"}
+            - 2:00pm - 4:30 Sessions{"\n"}
+            - Fun night on the town TBD
+        </Text>
+        <Text style={{ alignItems: 'center', fontSize: 25 }}>
+            Friday, November 8th:
+        </Text>
+        <Text style={{ alignItems: 'center', fontSize: 15 }}>
+            - 7:30am Breakfast{"\n"}
+            - 8:30am-12:00pm Sessions{"\n"}
+            - 12:00pm Distinguished Educator Keynote Lunch{"\n"}
+            - 2:00pm - 4:30 Sessions{"\n"}
+            - 5:00pm EDSIG Members Meeting{"\n"}
+            - 6:30pm Reception
+        </Text>
+        <Text style={{ alignItems: 'center', fontSize: 25 }}>
+            Saturday, November 9th:
+        </Text>
+        <Text style={{ alignItems: 'center', fontSize: 15 }}>
+            - 7:30am Breakfast{"\n"}
+            - 8:30am - 12:00pm Sessions{"\n"}
+            - 12:00pm Awards Lunch
+        </Text>
       </ScrollView>
     );
   }
@@ -262,17 +98,17 @@ const styles = StyleSheet.create({
     borderTopWidth: 1,
     paddingTop: 5,
     borderBottomWidth: 1,
-    borderColor: '#eee',
+    borderColor: '#fffff',
     height: 350
   },
   text: {
     textAlign: 'center',
     borderColor: '#bbb',
     padding: 10,
-    backgroundColor: '#eee'
+    backgroundColor: '#fffff'
   },
   container: {
     flex: 1,
-    backgroundColor: 'gray'
+    backgroundColor: '#fffff'
   }
 });
