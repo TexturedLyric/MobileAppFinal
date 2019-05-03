@@ -1,21 +1,28 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import styles from '../styles.js'
+import {MapView} from 'expo';
 
 
-class map extends React.Component{
+class Maps extends React.Component{
     state ={}
     
     componentWillMount() {}
     
         render(){
         return(
-            <View>
-            <Text>map</Text>
-            </View>
+            <MapView
+                style={{ flex: 1 }}
+                initialRegion={{
+                    latitude: 41.4986,
+                    longitude: -81.6945,
+                    latitudeDelta: 0.0922,
+                    longitudeDelta: 0.0421,
+                    }}
+          />
         )
         }
     }
     
-    export default home;
+    export default Maps;
     
