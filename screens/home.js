@@ -17,11 +17,11 @@ class Home extends React.Component {
 
     render() {
       return (
-        <ScrollView >
+        <ScrollView style={{ alignItems: 'center', justifyContent: 'center' }}>
         <Text style={{ alignItems: 'center', justifyContent: 'center' }} h1>
           EDISGCON Countdown
         </Text>
-        <Text h1>This year</Text>
+        
         <Countdown />
         <View style={{flex: 3, flexDirection: 'row'}}> 
           <SocialIcon onPress={ ()=>{ Linking.openURL('https://twitter.com/edsigcon')}} type='twitter' />
@@ -31,6 +31,8 @@ class Home extends React.Component {
       </ScrollView>
       );
     }
+    
   }
+  
     
     export default Home;

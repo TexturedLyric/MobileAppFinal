@@ -5,7 +5,7 @@ import Faqs from './screens/faqs';
 import Calender from './screens/calender';
 import Pictures from './screens/pictures';
 import Team from './screens/Team';
-import Maps from './screens/map';
+import Maps from './components/map';
 import { createMaterialTopTabNavigator, createAppContainer,} from 'react-navigation';
 import { MAP_TYPES } from "react-native-maps";
 

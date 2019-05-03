@@ -20,8 +20,12 @@ class Maps extends React.Component{
                     longitudeDelta: 0.0421,
                     }}
           />
+        
+          
         )
+        
         }
+        
     }
     
     export default Maps;

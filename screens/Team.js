@@ -1,6 +1,6 @@
 import React from 'react';
 import { FlatList, StyleSheet, Text, View } from 'react-native';
-
+import { Card} from 'react-native-elements'
 import * as firebase from 'firebase';
 import 'firebase/firestore';
 
@@ -12,15 +12,15 @@ export default class Team extends React.Component {
   {
     super(props);
 
+    
     var config = {
-      //expo allows for secrets and keys access: https://docs.expo.io/versions/latest/workflow/configuration/
-        apiKey: "AIzaSyC39fh8pYIVv5maDWNaDZkUR3nFbC0mz5o",
-        authDomain: "thisone-a46a9.firebaseapp.com",
-        databaseURL: "https://thisone-a46a9.firebaseio.com",
-        projectId: "thisone-a46a9",
-        storageBucket: "thisone-a46a9.appspot.com",
-        messagingSenderId: "390258913747",
-        appId: "1:390258913747:web:8929233d69b39b74"
+      apiKey: "AIzaSyDffGCZRShzCsW-SkOVAP6aPOAPy4Gx_-U",
+      authDomain: "mobilefinal-15268.firebaseapp.com",
+      databaseURL: "https://mobilefinal-15268.firebaseio.com",
+      projectId: "mobilefinal-15268",
+      storageBucket: "mobilefinal-15268.appspot.com",
+      messagingSenderId: "298349171585", 
+      appId: "1:390258913747:web:8929233d69b39b74"
     };
 
     //ensure that no more than one firebase is instantiated
@@ -30,7 +30,7 @@ export default class Team extends React.Component {
 
     this.state = {
       Collaborators: [],
-      db: firebase.firestore()
+      db: firebase.firestore() 
     }
 
     this.HandleDatabaseRead = this.HandleDatabaseRead.bind(this);
@@ -39,7 +39,7 @@ export default class Team extends React.Component {
   }
 
   GetAllCollaborators(Name){
-    let colRef = this.state.db.collection("Collaborators");
+    let colRef = this.state.db.collection("speakers");
 
     colRef.get()
              .then( (querySnapshot) => {
@@ -62,12 +62,13 @@ export default class Team extends React.Component {
     data.forEach( (doc) => {
 
       //destructure data
-      const { Name, School } = doc.data();
+      const { Name, School,Bio } = doc.data();
 
       let listCol = {
         key: doc.id,
         Name: Name,
-        School: School
+        School: School,
+        Bio: Bio
       }
 
       collaborators.push (listCol);
@@ -91,7 +92,7 @@ export default class Team extends React.Component {
       <View>
         <Text>Collaborators</Text>
         <FlatList data={this.state.Collaborators}
-                  renderItem={({item}) => <Text>{item.Name}</Text>} 
+                  renderItem={({item}) => <Card title={item.Name}><Text>{item.School}</Text><Text>{item.Bio}</Text></Card>} 
                   keyExtractor={item => item.key}
         />
       </View>
