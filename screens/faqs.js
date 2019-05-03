@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text,ScrollView, View, SafeAreaView } from 'react-native';
+import { StyleSheet,Button, Text,ScrollView, View, SafeAreaView } from 'react-native';
 import CardView from 'react-native-cardview';
 
  export default class Faqs extends React.Component {
