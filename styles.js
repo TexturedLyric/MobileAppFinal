@@ -7,6 +7,12 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       justifyContent: 'center',
     },
+    text: 
+    {
+      color: 'blue',
+      fontWeight: 'bold',
+      fontSize: 30,
+    }
   });
   
   module.exports = styles

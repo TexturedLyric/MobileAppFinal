@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
+import { StyleSheet, Text,ScrollView, View, SafeAreaView } from 'react-native';
 import CardView from 'react-native-cardview';
 
  export default class Faqs extends React.Component {
   render() {
     return (
       <SafeAreaView style={styles.safeAreaView}>
-        <View style={styles.container}>
+        <ScrollView style={styles.container}>
           <View flexDirection="row">
           <CardView
               cardElevation={1}
@@ -14,7 +14,8 @@ import CardView from 'react-native-cardview';
               cornerRadius={5}
               style={styles.card}
             >
-              <Text style={styles.text}>Elevation 1</Text>
+              <Text style={styles.text}>Where?</Text>
+              <Text style={styles.text}>24 Public Square, Clevland, Ohio 44113</Text>
             </CardView>
             <CardView
               cardElevation={1}
@@ -22,7 +23,8 @@ import CardView from 'react-native-cardview';
               cornerRadius={5}
               style={styles.card}
             >
-              <Text style={styles.text}>Elevation 1</Text>
+              <Text style={styles.text}>What Time?</Text>
+              <Text style={styles.text}>6pm on wednesday to 12 pm on Saturday</Text>
             </CardView>
           </View>
           <View flexDirection="row">
@@ -32,7 +34,8 @@ import CardView from 'react-native-cardview';
               cornerRadius={5}
               style={styles.card}
             >
-              <Text style={styles.text}>Elevation 2</Text>
+              <Text style={styles.text}>What Days?</Text>
+              <Text style={styles.text}>Nov.6th - Nov. 9th</Text>
             </CardView>
             <CardView
               cardElevation={3}
@@ -40,7 +43,8 @@ import CardView from 'react-native-cardview';
               cornerRadius={5}
               style={styles.card}
             >
-              <Text style={styles.text}>Elevation 3</Text>
+              <Text style={styles.text}>Who all is involved in the creation of Edsigcon?</Text>
+              <Text style={styles.text}>Currently 20 people including the amazing Dr. Babb are helping run this </Text>
             </CardView>
           </View>
           <View flexDirection="row">
@@ -50,7 +54,8 @@ import CardView from 'react-native-cardview';
               cornerRadius={5}
               style={styles.card}
             >
-              <Text style={styles.text}>Elevation 4</Text>
+              <Text style={styles.text}>What are the prices?</Text>
+              <Text style={styles.text}>Prices will range from $600 - $2000 depending on how involded you want to be and if you want to be provided food</Text>
             </CardView>
             <CardView
               cardElevation={5}
@@ -58,28 +63,11 @@ import CardView from 'react-native-cardview';
               cornerRadius={5}
               style={styles.card}
             >
-              <Text style={styles.text}>Elevation 5</Text>
+              <Text style={styles.text}>What companies are backing this conference?</Text>
+              <Text style={styles.text}>IMB, McGraw Hill Ed, PEGA, Cengage, and many more!</Text>
             </CardView>
-          </View>
-          <View flexDirection="row">
-            <CardView
-              cardElevation={6}
-              cardMaxElevation={6}
-              cornerRadius={5}
-              style={styles.card}
-            >
-              <Text style={styles.text}>Elevation 6</Text>
-            </CardView>
-            <CardView
-              cardElevation={7}
-              cardMaxElevation={7}
-              cornerRadius={5}
-              style={styles.card}
-            >
-              <Text style={styles.text}>Elevation 7</Text>
-            </CardView>
-          </View>
-        </View>
+            </View>
+        </ScrollView>
       </SafeAreaView>
     );
   }
