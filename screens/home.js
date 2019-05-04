@@ -17,6 +17,7 @@ class Home extends React.Component {
 
     render() {
       return (
+        // help came from here for soical icons https://react-native-training.github.io/react-native-elements/docs/social_icon.html
         <ScrollView style={{ alignItems: 'center', justifyContent: 'center' }}>
         <Countdown />
         <Image

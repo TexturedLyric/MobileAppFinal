@@ -5,7 +5,9 @@ import { Card} from 'react-native-elements'
  export default class Pictures extends React.Component {
   render() {
     return (
+      //this saved me for formatting this page https://facebook.github.io/create-react-app/docs/adding-images-fonts-and-files
       <ScrollView>
+        
         <Card
           image={{uri: 'https://scontent-dfw5-1.xx.fbcdn.net/v/t1.0-9/59039454_10157911566259714_5036926886408617984_n.jpg?_nc_cat=106&_nc_ht=scontent-dfw5-1.xx&oh=f9b453b3689f141bed5625694ed5eb1e&oe=5D317455'}}>
         </Card>

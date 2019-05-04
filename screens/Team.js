@@ -12,7 +12,7 @@ export default class Team extends React.Component {
   {
     super(props);
 
-    
+    //this code was from firebase for the configuration
     var config = {
       apiKey: "AIzaSyDffGCZRShzCsW-SkOVAP6aPOAPy4Gx_-U",
       authDomain: "mobilefinal-15268.firebaseapp.com",
@@ -24,6 +24,7 @@ export default class Team extends React.Component {
     };
 
     //ensure that no more than one firebase is instantiated
+    //the rest of this code was from dr babb
     if (!firebase.apps.length) {
         firebase.initializeApp(config);
     }

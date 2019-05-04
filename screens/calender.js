@@ -14,11 +14,13 @@ export default class CalendarsScreen extends Component {
       <ScrollView style={styles.container}>
         <Text style={styles.text}>Calendar for Edsigcon</Text>
         <Calendar
+        
           style={styles.calendar}
           current={''}
           minDate={'2012-05-10'}
           markingType={'period'}
           theme={{
+            // code for this was pulled from https://github.com/wix/react-native-calendars
             calendarBackground: '#333248',
             textSectionTitleColor: 'white',
             dayTextColor: 'red',
@@ -56,7 +58,7 @@ export default class CalendarsScreen extends Component {
             Thursday, November 7th:
         </Text>
         <Text style={{ alignItems: 'center', fontSize: 15 }}>
-            - 7:00am - 4:30p Registration{"\n"}
+            - 7:00am - 4:30p Registration{"\n"} {/*Code for this was pulled from https://stackoverflow.com/questions/32469570/how-can-i-insert-a-line-break-into-a-text-component-in-react-native */}
             - 7:30am Breakfast{"\n"}
             - 8:30am - 12:00pm Sessions and Workshops begin{"\n"}
             - 12:00pm Industry Keynote Lunch{"\n"}

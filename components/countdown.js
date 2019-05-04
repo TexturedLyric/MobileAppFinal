@@ -10,7 +10,7 @@ export default class Countdown extends React.Component {
       totalDuration: '',
     };
   }
-
+  //this code was takenfrom https://www.npmjs.com/package/react-native-countdown-component
   componentDidMount() {
     var that = this;
     var date = moment()
